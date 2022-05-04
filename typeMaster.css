@@ -1,8 +1,45 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-body{
-    
+/* GENERAL STYLES*/
+:root{
+    --button1-color: #F16718;
+    --button1-hover: #FF9B62;
+
+    --button2-color: #E8EFF2;
+    --button2-hover: #162542;
+
 }
+
+h1{
+    font-family: "Barlow", Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 56px;
+    line-height: 56px;
+    font-weight: 900, black;
+    text-transform: uppercase;
+}
+h2{
+    font-family: "Barlow", Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 32px;
+    line-height: 32px;
+    text-transform: uppercase;
+}
+h3{
+    font-family: "Barlow", Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 24px;
+    line-height: 26px;
+}
+p{
+    font-family: "Barlow", Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px, medium;
+    line-height: 26px;
+    text-transform: capitalize;
+}
+.icon{
+    height: max-content;
+}
+
+/*body styles
+==============*/
 .screen-div{
     position: relative;
     max-width: 375px; 
@@ -12,7 +49,9 @@ body{
     background-color: gray; /*aid*/
     overflow: hidden;
 }
-/*HEADER STYLES*/
+
+/*HEADER STYLES
+================*/
 .main-header{
     position: absolute;
     width: 327px;
@@ -26,8 +65,6 @@ body{
     right: 0;
     height: 40px;
     width: fit-content;
-    text-transform: uppercase;
-    background-color: #e8eff2;
     border-radius: 5%;
     text-align: center;
 }
@@ -55,16 +92,6 @@ body{
     left: 24px;
     top: 0px;
     padding-top: 0;
-
-    font-family: 'Barlow';
-    font-style: normal;
-    font-weight: 900;
-    font-size: 48px;
-    line-height: 48px;
-
-    text-transform: uppercase;
-
-    color: #162542;
 }
 .intro p{
     position: absolute;
@@ -72,14 +99,7 @@ body{
     height: 78px;
     left: 24px;
     top: 128px;
-
-    font-family: 'Barlow';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 26px;
-    color: #7B8BAD;
-
+    text-align: justify;
 }
 .intro-footer{
     position: absolute;
@@ -104,18 +124,6 @@ body{
     width: fit-content;
     right: 0px;
     bottom: 0px;
-
-    font-family: 'Barlow';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 26px;
-    text-align: center;
-
-    text-transform: uppercase;
-
-    color: #7B8BAD;
-    background-color: #162542;
 }
 /* KEYBOARD IMAGES */
 .keyboard-img{
@@ -143,6 +151,63 @@ body{
     top: 840px;
     border-radius: 10%;
 
+}
+
+/* ICONS */
+.icon-div{
+    position: absolute;
+    top: 1108px;
+    margin: auto;
+}
+.wireless-el{
+    position: relative;
+    top: 0px;
+    margin: auto;
+    
+}
+.compatibility{
+    position: relative;
+    margin-top: 64px;
+    margin: auto;
+}
+.bluetooth{
+    position: relative;
+    margin-top: 64px;
+    margin: auto;
+}
+.battery{
+    position: relative;
+    margin-top: 64px;
+    margin: auto;
+}
+.backlit{
+    position: relative;
+    margin-top: 64px;
+    margin: auto;
+}
+.bluetooth-img, .compatibility-img, .battery-img, .backlit-img{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 65px;
+    height: 65px;
+    top: 0px;
+    background-color: #F16718;
+    margin: auto;
+}
+
+.wireless-h2, .bluetooth-h2, .battery-h2, .compatibility-h2, .backlit-h2{
+    position: relative;
+    margin-top: 48px;
+    width: 327px;
+    height: 56px;
+    margin: auto;
+}
+.wireless-p, .bluetooth-p, .battery-p, .compatibility-p, .backlit-p{
+    position: relative;
+    margin-top: 24px;
+    text-align: center;
 }
 
 /*FOOTER STYLES*/
