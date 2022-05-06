@@ -1,5 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("./mobilesStyles.css") screen and (max-width: 375px);
 
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 /* GENERAL STYLES*/
 :root{
     --button1-color: #F16718;
@@ -14,177 +15,111 @@ h1{
     font-family: "Barlow", Verdana, Geneva, Tahoma, sans-serif;
     font-size: 56px;
     line-height: 56px;
-    font-weight: 900, black;
+    font-weight: 900;
+    color: black;
     text-transform: uppercase;
 }
 h2{
     font-family: "Barlow", Verdana, Geneva, Tahoma, sans-serif;
     font-size: 32px;
     line-height: 32px;
+    color: black;
     text-transform: uppercase;
+    width: fit-content;
+    height: fit-content;
+    text-align: center;
+    position: relative;
+    top: 24px;
+    margin-bottom: 48px;
 }
 h3{
     font-family: "Barlow", Verdana, Geneva, Tahoma, sans-serif;
     font-size: 24px;
     line-height: 26px;
+    color: black;
+
 }
 p{
     font-family: "Barlow", Verdana, Geneva, Tahoma, sans-serif;
     font-size: 16px, medium;
     line-height: 26px;
+    color: black;
+    text-align: center;
     text-transform: capitalize;
-}
-.icon{
-    height: max-content;
-}
-
-/*body styles
-==============*/
-.screen-div{
     position: relative;
-    max-width: 375px; 
-    background-color:#fff; 
-    height: 3000px;
-    margin: auto;
-    background-color: gray; /*aid*/
-    overflow: hidden;
 }
 
 /*HEADER STYLES
 ================*/
-.main-header{
-    position: absolute;
-    width: 327px;
-    height: 40px;
-    left: 24px;
-    background-color: black;
-    
-}
+ 
 .header-button{
     position: absolute;
-    right: 0;
+    right: 0px;
     height: 40px;
+    border: 1px solid var(--button2-color);
     width: fit-content;
     border-radius: 5%;
     text-align: center;
+    background-color: var(--button2-color);
+    text-transform: uppercase;
+   
+}
+.header-button:hover{
+    background-color: var(--button2-hover);
 }
 .header-img{
     position: absolute;
     height: 40px;
     width: 40px;
-    left: 0;
+    left: 0px;
+    text-transform: uppercase;
 }
 
 /*INTRODUCTION*/
-.intro{
-    position: absolute;
+.intro-h1{
+    position: relative;
     width: 327px;
-    height: 286px;
-    left: 24px;
-    top: 135px;
-    background-color: aqua;
-
+    height: fit-content;
+    margin: auto;
 }
-.intro h1{
-    position: absolute;
+.intro-p{
+    position: relative;
     width: 327px;
-    height: 96px;
-    left: 24px;
-    top: 0px;
-    padding-top: 0;
-}
-.intro p{
-    position: absolute;
-    width: 327px;
-    height: 78px;
-    left: 24px;
-    top: 128px;
+    height: fit-content;
+    margin: auto;
+    top: 32px;
     text-align: justify;
+    text-transform: capitalize;
 }
 .intro-footer{
-    position: absolute;
+    position: relative;
     width: 310px;
     height: 48px;
-    left: 24px;
-    bottom: 0px;
+    margin: auto;
+    top: 32px;
 }
-.intro-footer button{
+.intro-footer-button{
     position: absolute;
     left: 0%;
     right: 51.61%;
     top: 0%;
     bottom: 0%;
-    background-color: #F16718;
+    border: 1px solid var(--button1-color);
+    background-color: var(--button1-color);
     border-radius: 7%;
-
 }
-.intro-footer p{
+.intro-footer-button:hover{
+    background-color: var(--button1-hover);
+}
+.intro-footer-p{
     position: absolute;
     height: 26px;
     width: fit-content;
     right: 0px;
     bottom: 0px;
-}
-/* KEYBOARD IMAGES */
-.keyboard-img{
-    position: absolute;
-    width: 372px;
-    height: 331px;
-    left: 24px;
-    top: 485px;
-    border-radius: 10%;
-}
-.phone{
-    position: absolute;
-    width: 129px;
-    height: 193px;
-    left: -22px;
-    top: 840px;
-    border-radius: 10%;
-
-}
-.glass{
-    position: absolute;
-    width: 220px;
-    height: 193px;
-    left: 131px;
-    top: 840px;
-    border-radius: 10%;
-
+    text-transform: uppercase;
 }
 
-/* ICONS */
-.icon-div{
-    position: absolute;
-    top: 1108px;
-    margin: auto;
-}
-.wireless-el{
-    position: relative;
-    top: 0px;
-    margin: auto;
-    
-}
-.compatibility{
-    position: relative;
-    margin-top: 64px;
-    margin: auto;
-}
-.bluetooth{
-    position: relative;
-    margin-top: 64px;
-    margin: auto;
-}
-.battery{
-    position: relative;
-    margin-top: 64px;
-    margin: auto;
-}
-.backlit{
-    position: relative;
-    margin-top: 64px;
-    margin: auto;
-}
 .bluetooth-img, .compatibility-img, .battery-img, .backlit-img{
     position: relative;
     display: flex;
@@ -197,19 +132,6 @@ p{
     margin: auto;
 }
 
-.wireless-h2, .bluetooth-h2, .battery-h2, .compatibility-h2, .backlit-h2{
-    position: relative;
-    margin-top: 48px;
-    width: 327px;
-    height: 56px;
-    margin: auto;
-}
-.wireless-p, .bluetooth-p, .battery-p, .compatibility-p, .backlit-p{
-    position: relative;
-    margin-top: 24px;
-    text-align: center;
-}
-
 /*FOOTER STYLES*/
 .main-footer{
     position: absolute;
@@ -219,3 +141,6 @@ p{
     margin: auto;
     text-align: center;
 }
+
+/*==========================================================================================================
+==========================================================================================================*/
