@@ -1,7 +1,4 @@
-/*@import url("./tabstyles.css") screen and (max-width: 768px);
-@import url("./mobilesStyles.css") screen and (max-width: 375px); */
-    
-@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 /*===== GENERAL STYLES=====
 ============================*/
@@ -13,12 +10,23 @@
     --button2-hover: #162542;
 
 }
-
+body{
+    padding: 0;
+    padding: 0;
+}
+.screen-div{
+    position: relative;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+}
 /* general h1 styles*/
 h1{
     font-family: "Barlow", Verdana, Geneva, Tahoma, sans-serif;
     font-size: 40px;
     line-height: 56px;
+    font-weight: 900;
     
     color: black;
     text-transform: uppercase;
@@ -26,55 +34,49 @@ h1{
 
 /*general h2 styles*/
 h2{
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin-bottom: 48px;
+    font-weight: 900;
+
     font-family: "Barlow", Verdana, Geneva, Tahoma, sans-serif;
     font-size: 32px;
     line-height: 32px;
-    width: 100%;
-    color: black;
     text-transform: uppercase;
-    width: 100%;
-    height: fit-content;
     text-align: center;
-    position: relative;
-    top: 24px;
-    margin-bottom: 48px;
-    height: auto
-}
-
-/*general h3 styles*/
-h3{
-    font-family: "Barlow", Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 24px;
-    line-height: 26px;
-    width: 100%;
-    color: black;
-    height: auto;
-
 }
 
 /*general paragraph styles*/
 p{
+    width: 100%;
+    height: auto;
+
     font-family: "Barlow", Verdana, Geneva, Tahoma, sans-serif;
     font-size: 16px, medium;
     line-height: 26px;
-    width: 100%;
-    color: black;
+    color: #7b8bad;
     text-align: center;
     text-transform: capitalize;
-    height: auto
+}
+.wireless-el h2{
+    width: 150px;
+    margin: 32px auto;
+    text-align: center;
 }
 
+/*General Layout*/
 .intro-el, .icon{
     max-width: 375px;
     height: auto;
 }
 
+/*    PAGE HEADER STYLES
+================================*/
+
 .main-header{
     height: auto;
 }
-
-/*===== PAGE HEADER STYLES=====
-================================*/
  
 .header-button{
     position: absolute;
@@ -104,10 +106,10 @@ p{
 }
 
 
-/*=======INTRODUCTION======
+/*     INTRODUCTION
 =============================*/
 .intro{
-    position: relative;     /*To help postion elements*/
+    position: relative;    
 }
 
 /*Footer of introductory box*/
@@ -149,6 +151,8 @@ p{
 .bluetooth-icon, .compatibility-icon, .battery-icon, .backlit-icon{
     position: relative;
     top: 0px;
+    left: 10px;
+    
 
     display: flex;
     justify-content: center;
@@ -174,8 +178,20 @@ p{
     text-align: center;
 }
 
+
 /*PHONE STYLE*/
 @media screen and (max-width: 375px) {
+    
+    .icon-div div{
+        position: relative;
+        right: -25px;
+    }
+
+    .wireless-el{
+        position: relative;
+        right: -25px;
+    }        
+    }
     .keyboard-pic{
         background-image: url("./assets/mobile/image-keyboard.jpg");
         background-size: cover;
@@ -187,7 +203,7 @@ p{
         height: 331px;
         margin: 5%;
 
-        border-radius: 10%;
+        border-radius: 10% 0% 0% 10%;
     }
     .phone-pic{
         background-image: url("./assets/mobile/image-phone-and-keyboard.jpg");
@@ -209,36 +225,41 @@ p{
         background-size: cover;
         
         position: absolute;
-        top: 730px;
-        right: 0;
+        top: 720px;
+        right: 0px;
         
-        width: 220px;
+        width: 270px;
         height: 193px;
-        margin: 0 10px 0 5px;
+        right: -40px;
 
         border-radius: 10%;
     }
     .intro p{
         text-align: left;
     }
+
+    
+    
+    
 }
 
 /*Tablet style*/
-@media screen and (min-width:375px) and (max-width: 768px) {
-    /*body{
-        display: flex;
-        flex-direction: column;
-    }
-    */
+@media screen and (min-width:375.3px) and (max-width: 768px) {
+    
+    /*General Layout*/
+    
     .intro-el, .icon{
         max-width: 330px;
         height: auto;
     }
     .introduction{
+        position: relative;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+        margin: 60px 0;
     }
+
     .introduction > div{
         margin: 5px;
     }
@@ -247,6 +268,36 @@ p{
         float: left;
         height: 435px;
     }
+    
+    .wireless-el{
+        position: relative;
+        max-width: 768px;
+        
+
+    }
+
+    .wireless-el  p{
+        text-align: left;
+        max-width: 60%;
+        margin-left: 300px;
+    }
+
+    .wireless-el h2{
+        /*text-align: left;
+        align-self: flex-start;
+        padding: 0 30px;*/
+        float: left;
+        
+    }
+
+    .icon-div{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+  
+
+    /*Keybord image importation*/
     .keyboard-pic{
         background-image: url("./assets/tablet/image-keyboard.jpg");
         background-size: cover;
@@ -258,47 +309,27 @@ p{
 
         border-radius: 5% 0 0 5%;
 
-
     }
+
     .phone-pic{
         background-image: url("./assets/tablet/image-phone-and-keyboard.jpg");
         background-size: cover;
 
         width: 214px;
         height: 320px;
-
-        
-    
     }
+
     .glass-pic{
         background-image: url("./assets/tablet/image-glass-and-keyboard.jpg");
         background-size: cover;
                
-        width: 645px;
+        width: 600px;
         height: 320px;
+        margin: auto 100px;
         
         border-radius: 10%;
     }
-    .wireless-el{
-        display: flex;
-        max-width: 768px;
 
-    }
-
-    .wireless-el  p{
-        text-align: left;
-    }
-    .wireless-el h2{
-        text-align: left;
-        align-self: flex-start;
-        
-    }
-
-    .icon-div{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
 }
 
 /*Desktop style*/
@@ -415,7 +446,3 @@ p{
 
   
 }
-
-
-
-
