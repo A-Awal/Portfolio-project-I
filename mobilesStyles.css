@@ -1,10 +1,11 @@
+
 /*===PHONE STYLES====
     ===============*/
 
 /*body styles
 ==============*/
 .screen-div{
-    position: relative;
+    position: relative; 
     max-width: 375px;  
     height: 3000px;
     margin: auto;
@@ -22,18 +23,18 @@
 }
 
 /*INTRODUCTION*/
-.intro{
+/*.intro{
     position: absolute;
     top: 135px;
     width: 327px;
-    height: fit-content;
+    height: auto;
     margin: auto;
-}
+}*/
 
 
 
 /* KEYBOARD IMAGES */
-.keyboard-img{
+.keyboard-pic{
     position: absolute;
     background-image: url("./assets/mobile/image-keyboard.jpg");
     background-size: cover;
@@ -43,7 +44,7 @@
     top: 485px;
     border-radius: 10%;
 }
-.phone{
+.phone-pic{
     position: absolute;
     background-image: url("./assets/mobile/image-phone-and-keyboard.jpg");
     background-size: cover;
@@ -54,7 +55,7 @@
     border-radius: 10%;
 
 }
-.glass{
+.glass-pic{
     position: absolute;
     background-image: url("./assets/mobile/image-glass-and-keyboard.jpg");
     background-size: cover;
@@ -71,7 +72,7 @@
     top: 1108px;
     margin: auto;
 }
-.wireless-el ,.compatibility, .bluetooth, .battery, .backlit{
+.wireless-el, .compatibility, .bluetooth, .battery, .backlit{
     position: relative;
     margin: auto;
     margin-top: 64px;
