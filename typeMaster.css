@@ -10,7 +10,7 @@
     --button2-hover: #162542;
 
 }
-body{
+/*body{
     padding: 0;
     padding: 0;
 }
@@ -20,7 +20,7 @@ body{
     margin-right: 0;
     padding-left: 0;
     padding-right: 0;
-}
+} */
 /* general h1 styles*/
 h1{
     font-family: "Barlow", Verdana, Geneva, Tahoma, sans-serif;
@@ -92,9 +92,14 @@ p{
     text-transform: uppercase;
    
 }
+.header-button p{
+    margin-top: 5px;
+    
+}
 
 .header-button:hover{
     background-color: var(--button2-hover);
+    color: #fff;
 }
 
 .header-icon{
@@ -134,6 +139,7 @@ p{
 
 .intro-footer-button:hover{
     background-color: var(--button1-hover);
+    color: #fff;
 }
 
 .intro-footer-p{
@@ -182,6 +188,11 @@ p{
 /*PHONE STYLE*/
 @media screen and (max-width: 375px) {
     
+    .screen-div{
+        width: 375px;
+        height: 2500px;
+    }
+
     .icon-div div{
         position: relative;
         right: -25px;
@@ -190,8 +201,12 @@ p{
     .wireless-el{
         position: relative;
         right: -25px;
-    }        
+    } 
+    
+    .introduction{
+        position: relative;
     }
+    
     .keyboard-pic{
         background-image: url("./assets/mobile/image-keyboard.jpg");
         background-size: cover;
@@ -211,6 +226,7 @@ p{
 
         position: relative;
         left: -22px;
+        float: left;
 
         width: 129px;
         height: 193px;
@@ -224,13 +240,12 @@ p{
         background-image: url("./assets/mobile/image-glass-and-keyboard.jpg");
         background-size: cover;
         
-        position: absolute;
-        top: 720px;
-        right: 0px;
+        position: relative;
+        right: -120px;
         
         width: 270px;
         height: 193px;
-        right: -40px;
+        
 
         border-radius: 10%;
     }
@@ -252,6 +267,7 @@ p{
         max-width: 330px;
         height: auto;
     }
+
     .introduction{
         position: relative;
         display: flex;
@@ -264,16 +280,9 @@ p{
         margin: 5px;
     }
 
-    .intro{
-        float: left;
-        height: 435px;
-    }
-    
     .wireless-el{
         position: relative;
         max-width: 768px;
-        
-
     }
 
     .wireless-el  p{
@@ -283,9 +292,7 @@ p{
     }
 
     .wireless-el h2{
-        /*text-align: left;
-        align-self: flex-start;
-        padding: 0 30px;*/
+        margin-top: 1px;
         float: left;
         
     }
@@ -322,14 +329,18 @@ p{
     .glass-pic{
         background-image: url("./assets/tablet/image-glass-and-keyboard.jpg");
         background-size: cover;
-               
-        width: 600px;
+        position: relative;  
+        left: -100px;
+        width: 375px;
         height: 320px;
         margin: auto 100px;
         
         border-radius: 10%;
+
+        justify-self: stretch;
     }
 
+    
 }
 
 /*Desktop style*/
@@ -361,10 +372,13 @@ p{
     .empty1{
         order: 1;
         border-radius: 0 10% 10% 0;
-       /* grid-area: "empty1";*/
-       grid-column: 1/2;
-       justify-content: space-between;
-       align-self: center;
+       
+        grid-column: 1/2;
+        justify-content: space-between;
+        align-self: center;
+
+        position: relative;
+        left: -20px;
     }
 
     .empty2{
@@ -434,10 +448,12 @@ p{
     margin-top: 100px;
     justify-content: space-around;
     }
+
     .icon{
         position: relative;
         margin: 5px;
     }
+
     .bluetooth-icon, .compatibility-icon, .battery-icon, .backlit-icon{ 
         position: absolute;
         left: 0;
