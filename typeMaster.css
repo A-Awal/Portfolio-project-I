@@ -10,17 +10,7 @@
     --button2-hover: #162542;
 
 }
-/*body{
-    padding: 0;
-    padding: 0;
-}
-.screen-div{
-    position: relative;
-    margin-left: 0;
-    margin-right: 0;
-    padding-left: 0;
-    padding-right: 0;
-} */
+
 /* general h1 styles*/
 h1{
     font-family: "Barlow", Verdana, Geneva, Tahoma, sans-serif;
@@ -37,7 +27,9 @@ h2{
     position: relative;
     width: 100%;
     height: auto;
-    margin-bottom: 48px;
+    margin-top: 32px;
+    margin-bottom: 32px;
+
     font-weight: 900;
 
     font-family: "Barlow", Verdana, Geneva, Tahoma, sans-serif;
@@ -60,9 +52,10 @@ p{
     text-transform: capitalize;
 }
 .wireless-el h2{
-    width: 150px;
+    width: 200px;
     margin: 32px auto;
     text-align: center;
+
 }
 
 /*General Layout*/
@@ -76,6 +69,7 @@ p{
 
 .main-header{
     height: auto;
+    width: 100%;
 }
  
 .header-button{
@@ -90,14 +84,12 @@ p{
 
     text-align: center;
     text-transform: uppercase;
-   
-}
-.header-button p{
-    margin-top: 5px;
-    
+    text-decoration: none;
+    padding: auto 0;
 }
 
-.header-button:hover{
+
+.header-button:active{
     background-color: var(--button2-hover);
     color: #fff;
 }
@@ -135,9 +127,10 @@ p{
     border: 1px solid var(--button1-color);
     background-color: var(--button1-color);
     border-radius: 7%;
+    text-decoration: none;
 }
 
-.intro-footer-button:hover{
+.intro-footer-button:active{
     background-color: var(--button1-hover);
     color: #fff;
 }
@@ -157,7 +150,8 @@ p{
 .bluetooth-icon, .compatibility-icon, .battery-icon, .backlit-icon{
     position: relative;
     top: 0px;
-    left: 10px;
+
+    border-radius: 20%;
     
 
     display: flex;
@@ -221,7 +215,8 @@ p{
         border-radius: 10% 0% 0% 10%;
     }
     .phone-pic{
-        background-image: url("./assets/mobile/image-phone-and-keyboard.jpg");
+        background-image: url("./assets/mobile/image-phone-and-keyboard.jpg"), linear-gradient(to right, #f16818be, #f16818be);
+        background-blend-mode: lighten;
         background-size: cover;
 
         position: relative;
@@ -262,6 +257,10 @@ p{
 @media screen and (min-width:375.3px) and (max-width: 768px) {
     
     /*General Layout*/
+    .screen-div{
+        width: 768px;
+        height: 2128px;
+    }
     
     .intro-el, .icon{
         max-width: 330px;
@@ -302,7 +301,6 @@ p{
         flex-wrap: wrap;
         justify-content: space-between;
     }
-  
 
     /*Keybord image importation*/
     .keyboard-pic{
@@ -319,11 +317,14 @@ p{
     }
 
     .phone-pic{
-        background-image: url("./assets/tablet/image-phone-and-keyboard.jpg");
+        background-image: url("./assets/tablet/image-phone-and-keyboard.jpg"), linear-gradient(to right, #f16818be, #f16818be);
+        background-blend-mode: lighten;
         background-size: cover;
 
         width: 214px;
         height: 320px;
+
+        border-radius: 5%;
     }
 
     .glass-pic{
@@ -345,30 +346,18 @@ p{
 
 /*Desktop style*/
 @media screen and (min-width: 766px) {
-    .introduction{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
-    .icon-div{
-        display: flex;
-
+/*general layout*/
+    body{
+        display:grid;
+         
+        grid-template-columns: 150px 1010px 150px;
     }
     .empty1, .empty2{
         width: 125px;
         height: 240px;
         background-color: #E8EFF2;
-        flex-basis: 140px;
-    
     }
-    body{
-        display:grid;
-        /*grid-template-areas: " empty1 screen empty2" ;*/
-        
-        grid-template-columns: 150px 1010px 150px ;
-        max-width: 1440px;
-    }
-
+   
     .empty1{
         order: 1;
         border-radius: 0 10% 10% 0;
@@ -384,20 +373,30 @@ p{
     .empty2{
         order: 3;
         border-radius: 10% 0 0 10%;
-        /*grid-area: "empty2"; */
+     
         grid-column: 3/4;
         justify-self: end;
+
+        position: relative;
+        right: -30px;
     }
-    
-   
     .screen-div{
-       /* grid-area: "screen"; */
-       grid-column: 2/3;
+        grid-column: 2/3;
         position: relative;
         order: 2;
-       
+    }
+    .introduction{
+        margin-top: 64px;
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
     }
     
+    .icon-div{
+        display: flex;
+        margin-top: 100px;
+    }
 
     .keyboard-pic{
         background-image: url("./assets/desktop/image-keyboard.jpg");
@@ -405,21 +404,21 @@ p{
         
         margin-left: 50px;
 
-        width: 540px;
+        width: 600px;
         height: 480px;
 
         border-radius: 5% ;
-    
 
+        
     }
     .phone-pic{
-        background-image: url("./assets/desktop/image-phone-and-keyboard.jpg");
+        background-image: url("./assets/desktop/image-phone-and-keyboard.jpg"), linear-gradient(to right, #f16818be, #f16818be);
+        background-blend-mode: lighten;
         background-size: cover;
         
         width: 255px;
         height: 480px;
-        
-        
+        border-radius: 5%;
     }
     .glass-pic{
         background-image: url("./assets/desktop/image-glass-and-keyboard.jpg");
@@ -428,37 +427,23 @@ p{
         width: 350px;
         height: 480px;
         
-        border-radius: 10%;
-        
+        border-radius: 10%;   
     }
 
    .wireless-el{
        display: flex;
        flex-direction: column;
-   }
-   p, h1, h2{
+
+       box-sizing: border-box;
+       padding: 50px; 
        text-align: left;
-       
    }
-   h2{
-       margin-top: 64px;
+  
+   p, h1, h2, .bluetooth-icon, .compatibility-icon, .battery-icon, .backlit-icon{
+       text-align: left;
+       margin-left: 0;  
    }
 
-   .icon-div{
-    margin-top: 100px;
-    justify-content: space-around;
-    }
-
-    .icon{
-        position: relative;
-        margin: 5px;
-    }
-
-    .bluetooth-icon, .compatibility-icon, .battery-icon, .backlit-icon{ 
-        position: absolute;
-        left: 0;
-        top: 0;
-    }
-
+   
   
 }
